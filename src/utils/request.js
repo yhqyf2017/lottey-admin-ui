@@ -46,9 +46,6 @@ service.interceptors.response.use(
    */
   (response) => {
     let res = response.data;
-    console.log("#################################################");
-    console.log("请求日志", res);
-    console.log("#################################################");
     // if the custom code is not 20000, it is judged as an error.
     if (res.errorCode) {
       Message({
@@ -63,6 +60,9 @@ service.interceptors.response.use(
         res.errorCode === "E0754" ||
         res.errorCode === "E0758"
       ) {
+        if(location.href.indexOf("login")>0){
+          return res;
+        }
         // to re-login
         MessageBox.confirm(
           "您已退出，您可以取消留在该页面，或重新登录",
