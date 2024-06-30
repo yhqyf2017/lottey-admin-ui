@@ -74,7 +74,7 @@ service.interceptors.response.use(
           }
         ).then(() => {
           store.dispatch("user/resetToken").then(() => {
-            location.reload();
+            // location.reload();
           });
         });
       }

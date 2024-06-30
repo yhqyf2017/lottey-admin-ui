@@ -4,7 +4,7 @@
       label-position="left">
 
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h3 class="title">登  陆</h3>
       </div>
 
       <el-form-item prop="username">
@@ -77,7 +77,6 @@ export default {
   },
   mounted() {
     videolist().then((res) => {
-       console.log(res, '测试');
       });
   },
   methods: {
